@@ -1,0 +1,29 @@
+.viewcontents {
+	float : left;
+	/*width : 45%;*/
+	margin-left : 10px;
+}
+
+table {
+	width : 100%;
+	border : 2px solid;
+	border-radius : 4px;
+	border-color : #6666ff;
+	margin-bottom : 10px;
+	border-collapse : collapse;
+	height : 400px;
+}
+
+td,th {
+	border : 2px solid;
+	border-radius : 10px;
+	border-color : #6666ff;
+	border-spacing : 10px;
+	padding : 25px;
+	font-size : 130%;
+}
+
+th {
+	text-align : right;
+	width : 40%;
+}

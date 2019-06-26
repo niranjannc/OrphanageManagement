@@ -1,0 +1,14 @@
+fieldset {
+	width : 25%;
+	/*text-align : center;*/
+	padding : 75px;
+	border-radius : 30px;
+	border-color : black;
+	border-width : 2px;
+}
+
+legend {
+	color : darkblue;
+	font-size : 240%;
+	text-align : center;
+}

@@ -1,0 +1,45 @@
+span {
+	color : red;
+}
+
+input[type = text], [type = password] {
+	width : 85%;
+	padding : 10px;
+	border-top : none;
+	border-right : none;
+	border-left: none;
+	border-bottom-color : #84adad;
+	border-radius : 0px;
+}
+
+input[type = text]:focus,[type = password]:focus {
+	border : none; 
+}
+
+input[type = submit] {
+	width : 50%;
+	background-color : white;
+	color : #00b3b3;
+	padding-bottom : 35px;
+	padding-top : 15px;
+	font-size : 130%;
+	cursor : pointer;
+	border-color : #00b3b3;
+}
+
+input[type = submit]:hover {
+	color : white;
+	background-color : #63b4ff;
+	border-color : white;
+}
+
+input {
+	border-radius : 6px;
+	border-collapse : none;
+	height : 30px;
+	font-size : 110%;
+}
+
+label {
+	font-size : 150%;
+}

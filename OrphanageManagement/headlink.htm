@@ -1,0 +1,53 @@
+<header class="header" >
+<?php
+	$server = "localhost";
+	$username = "root";
+	$password = "";
+	$dbname = "dborphanage";
+	try {
+		$conn = new PDO("mysql:host=$server; dbname=$dbname", $username, $password);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+		$conn->beginTransaction();
+		$sql = "USE $dbname";
+		$conn->exec($sql);
+	
+		include('orgid.php');
+	
+		$sql = "SELECT name, addlocation, addcity, adddistrict, addstate, phone, email
+				FROM orphanage
+				WHERE orgid = '$orgid'";
+		$stmt = $conn->prepare($sql);
+		$stmt->execute();
+	
+		$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+		$arr = $stmt->fetchAll();
+		$val = $arr[0];
+		
+		echo '<h1>'.strtoupper($val["name"]).'</h1>
+			<h3>'.ucwords($val["addlocation"].", ".$val["addcity"].", ".$val["adddistrict"]." ".$val["addstate"]).'<br />
+			Phone : '.$val["phone"].'  Email : '.$val["email"].'
+			</h3>';
+		
+		$conn->commit();
+		$conn=null;
+	}
+	catch(PDOException $e) {
+		$conn->rollback();
+		echo $e->getMessage();
+	}
+
+?>
+</header>
+
+<nav>
+<ul>
+<li><a href = "head.php" ><button type = "button" class = "headnav">Home</button></a></li>
+<li><a href = "infantslist.php" ><button type = "button" class = "headnav">Infants</button></a></li>
+<li><a href = "employeelist.php" ><button type = "button" class = "headnav">Employee</button></a></li>
+<li><a href = "donor_list.php" ><button type = "button" class = "headnav">Donors & Trustees</button></a></li>
+<li><a href = "adoptionlist.php" ><button type = "button" class = "headnav">Adoption</button></a></li>
+<li><a href = "headpassword.php" ><button type = "button" class = "headnav">Manage Account</button></a></li>
+<li><a href = "headlogout.php" ><button type = "button" class = "headnav">Log Out</button></a></li>
+</ul>
+</nav>

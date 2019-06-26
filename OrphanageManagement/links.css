@@ -1,0 +1,88 @@
+ul, body {
+	padding : 0px;
+}
+
+li {
+	display : inline;
+	/*padding : 25px;*/
+}
+
+nav{
+	text-align : center;
+	background-color : #00b386;
+}
+
+button {
+	margin-bottom : 25px;
+	margin-top : 25px;
+	cursor : pointer;
+	padding : 5px;
+	font-size : 120%;
+	width : 250px;
+	height : 70px;
+}
+
+.adminnav {
+	width : 18%;
+	background-color : transparent;
+	border : none;
+	color : #ffffff;
+	margin : 10px;
+}
+
+.adminnav:hover {
+	background-color : #00ba86;
+}
+
+.headnav {
+	width : 12.5%;
+	background-color : transparent;
+	border : none;
+	color : #ffffff;
+	margin : 10px;
+}
+
+.headnav:hover {
+	background-color : #00ba86;
+}
+
+.nestedlinks {
+	display : block;
+	float : left;
+	width : 25%;
+}
+
+.nestedlinks button {
+	margin-bottom : 0px;
+	margin-top : 0px;
+	padding-bottom : 25px;
+	padding-top : 25px;
+	width : 90%;
+	background-color : #d9d9d9;
+	border-color : transparent;
+	border-bottom-width : 2px;
+	border-top-width : 2px;
+}
+
+.nestedlinks button:hover {
+	background-color : #cccccc;
+}
+
+.tabcontent {
+	float : left;
+	width : 75%;
+}
+
+.header {
+	text-align : center;
+	font-family : "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color : #007399;
+}
+
+/*.footer {
+	background-color : #e0ebeb;
+	color : #3d5c5c;
+	text-align : center;
+	padding : 1px;
+	font-size : 120%;
+}*/
